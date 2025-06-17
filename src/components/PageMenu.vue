@@ -1,6 +1,6 @@
 <script setup>
     import { ref } from 'vue';
-    import JeuDrapeaux from './../views/JeuDrapeaux.vue';
+    import JeuDrapeaux from '../views/JeuDrapeaux.vue';
 
     const Drapeaux = ref(false);
 
