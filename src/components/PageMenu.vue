@@ -1,11 +1,29 @@
 <script setup>
+    import { ref } from 'vue';
+    import JeuDrapeaux from './../views/JeuDrapeaux.vue';
+
+    const Drapeaux = ref(false);
+
+  function resetAll() {
+    Drapeaux.value = false;
+  }
+
+  function fDrapeaux() {
+    resetAll();
+    Drapeaux.value = true;
+  }
 </script>
 
 <template>
     <header>
-        <h1>Hello world !</h1>
+        <h1>Choisissez le jeu auquel vous voulez jouer !</h1>
     </header>
-    <a href="./../views/JeuDrapeaux.vue">Jeu des drapeaux</a>
+
+    <nav>
+        <v-btn @click="fDrapeaux">Jeu des drapeaux</v-btn>
+    </nav>
+
+    <JeuDrapeaux v-if="Drapeaux" />
 </template>
 
 <style scoped>
